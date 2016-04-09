@@ -1,0 +1,34 @@
+ One record reply trivial DNS based on sendmsg and recvmmsg OS functions.
+
+
+ This is an simple example for my students about creating network services
+ at Go. It show using of sendmsg and recvmsg from Go.
+
+ Also, I would like to deliver my expressions about Go, compare it with
+ Erlang. For me this weekend was under Go flag. 
+ I never write code at go before, but now, after one day deep coding I can write on Go.
+ It easy language with good speed of creating pilot projects.
+ The main time was spent on slices,arrays and tuples sintaxis, variable
+ initializations. Unfortunally it not such rock-solid and stable as Erlang
+ on high load. At least for me, nuewbie for Golang. It like C (or Slang) but with more
+ comfortable sintaxis and some modern nuts and belts. 
+
+ (C) Dmitry Podkorytov 2016
+
+ COMPILATION:
+
+ Just type
+ $make 
+
+ Watch out, at old OS, like Debian Wheezy you can get errors:
+
+./one_dns_msg.go:13: imported and not used: "unsafe"
+./one_dns_msg.go:79: undefined: Sendmsg
+
+ It means what such function does not supported by Go in this OS.
+
+ TESTS:
+
+ Run it as root and test resolving by nslookup 1000.dip 127.0.0.1 
+ and then do benchmarks by dnsperf or something else
+
